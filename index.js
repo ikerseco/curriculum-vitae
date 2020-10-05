@@ -1,9 +1,8 @@
 const express = require('express')
-const mongoose = require('mongoose')
 const bodyParser= require ('body-parser')
+const roouter = require('./roouters/router.js')
 const fs = require('fs');
 const path = require('path')
-
 //firebase
 
 
@@ -24,12 +23,12 @@ app.use(function(req, res, next) {
   next();
 })
 
-
+app.use(roouter)
 
 http.createServer(function (req, res) {
   console.log(req.url)
   //Open a file on the server and return its content:
- if(req.url == "/KX$Q0hI"){
+ if(req.url == "/"){
     fs.readFile("./public/index.html", "UTF-8", function(err, html){
         res.writeHead(200, {"Content-Type": "text/html"});
         res.end(html);
