@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser= require ('body-parser')
-const roouter = require('./roouters/router.js')
+const roouter = require('./roouters/router')
 const fs = require('fs');
 const path = require('path')
 //firebase
@@ -8,9 +8,10 @@ const path = require('path')
 
 
 const http = require('http');
+const port = process.env.PORT || 3001;
 
 const app = express();
-
+const server = http.createServer(app);
 
 app.use (bodyParser.urlencoded({ extended: false}));
 app.use (bodyParser.json());
@@ -22,7 +23,12 @@ app.use(function(req, res, next) {
 })
 app.use(roouter)
 
+server.listen(port, () => {
+  console.log(`http://127.0.0.1:${port}`);
+});
 
+
+/*
 
 http.createServer(function (req, res) {
   console.log(req.url)
@@ -63,7 +69,7 @@ http.createServer(function (req, res) {
 server.listen(port, () => {
   console.log(`Servidor up en http://127.0.0.1:${port}`);
 });
-
+*/
 /*mongoose.connect(mongodbRoute, options, (err) => {
       if (err) {
           return console.log(`Error al conectar a la base de datos: ${err}`)
