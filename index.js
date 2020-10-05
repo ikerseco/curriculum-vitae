@@ -1,6 +1,5 @@
 const express = require('express')
 const bodyParser= require ('body-parser')
-const roouter = require('./roouters/router.js')
 const fs = require('fs');
 const path = require('path')
 //firebase
@@ -9,9 +8,7 @@ const path = require('path')
 
 const http = require('http');
 
-const port = process.env.PORT || 30001;
 const app = express();
-const server = http.createServer(app);
 
 
 app.use (bodyParser.urlencoded({ extended: false}));
@@ -23,7 +20,6 @@ app.use(function(req, res, next) {
   next();
 })
 
-app.use(roouter)
 
 http.createServer(function (req, res) {
   console.log(req.url)
@@ -60,10 +56,6 @@ http.createServer(function (req, res) {
 }).listen(8080,()=>{
   console.log(`Servidor up en http://127.0.0.1:8080/KX$Q0hI`);
 })
-  
-server.listen(port, () => {
-  console.log(`Servidor up en http://127.0.0.1:${port}`);
-});
 
 
 /*mongoose.connect(mongodbRoute, options, (err) => {
