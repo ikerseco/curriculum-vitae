@@ -1,7 +1,7 @@
 {
-  "name": "geturl",
+  "name": "curriculum-vitae",
   "version": "1.0.0",
-  "description": "",
+  "description": "curriculum vitae url:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ikerseco/getUrl.git"
+    "url": "git+https://github.com/ikerseco/curriculum-vitae.git"
   },
   "author": "seco",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ikerseco/getUrl/issues"
+    "url": "https://github.com/ikerseco/curriculum-vitae/issues"
   },
-  "homepage": "https://github.com/ikerseco/getUrl#readme",
+  "homepage": "https://github.com/ikerseco/curriculum-vitae#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
@@ -35,5 +35,6 @@
   },
   "engines": {
     "node": "14.x"
-  }
+  },
+  "devDependencies": {}
 }
