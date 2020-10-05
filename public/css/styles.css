@@ -120,7 +120,9 @@ body{
   
 .translate:nth-child(9){
     left: -16%;
-    animation-duration: 40s
+    animation-duration: 40s;
+    width: 480px;
+    height: 480px;
 }
 
 
@@ -148,8 +150,8 @@ body{
     
 }
 .translate:nth-child(3){
-    width: 80px;
-    height: 80px;
+    width: 135px;
+    height: 135px;
     left: 5%;
     
 }
@@ -169,8 +171,8 @@ body{
     border-radius: 0%;
 }
 .translate:nth-child(6){
-    width:45px;
-    height: 45px;
+    width:145px;
+    height: 145px;
     left: 20%;
     animation-delay: 5s;
 }
