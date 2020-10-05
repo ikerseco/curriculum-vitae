@@ -1,20 +1,20 @@
 {
   "name": "curriculum-vitae",
   "version": "1.0.0",
-  "description": "curriculum vitae url:",
+  "description": "curriculum",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ikerseco/curriculum-vitae.git"
   },
+  "keywords": [
+    "exanple",
+    "heroku"
+  ],
   "author": "seco",
   "license": "ISC",
   "bugs": {
@@ -23,18 +23,8 @@
   "homepage": "https://github.com/ikerseco/curriculum-vitae#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
-    "fs": "0.0.2",
-    "http": "0.0.0",
-    "http-proxy": "^1.18.1",
-    "mongoose": "^5.7.10",
-    "path": "^0.12.7",
-    "utf8": "^3.0.0",
-    "youtube-node": "^1.3.3"
-  },
-  "engines": {
-    "node": "14.x"
-  },
-  "devDependencies": {}
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4"
+  }
 }
