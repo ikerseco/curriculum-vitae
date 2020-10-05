@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser= require ('body-parser')
+const roouter = require('./roouters/router.js')
 const fs = require('fs');
 const path = require('path')
 //firebase
@@ -19,6 +20,8 @@ app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 })
+app.use(roouter)
+
 
 
 http.createServer(function (req, res) {
@@ -53,10 +56,13 @@ http.createServer(function (req, res) {
     res.writeHead(404, {"Content-Type": "text/html"});
     res.end("No Page Found");
   }
-}).listen(443,()=>{
+}).listen(8080,()=>{
   console.log(`Servidor up en http://127.0.0.1:8080/KX$Q0hI`);
 })
 
+server.listen(port, () => {
+  console.log(`Servidor up en http://127.0.0.1:${port}`);
+});
 
 /*mongoose.connect(mongodbRoute, options, (err) => {
       if (err) {
