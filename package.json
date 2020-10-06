@@ -4,7 +4,6 @@
   "description": "curriculum",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -12,8 +11,10 @@
     "url": "git+https://github.com/ikerseco/curriculum-vitae.git"
   },
   "keywords": [
-    "exanple",
-    "heroku"
+    "node",
+    "heroku",
+    "express",
+    "nodemon"
   ],
   "author": "seco",
   "license": "ISC",
@@ -26,5 +27,8 @@
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "4.7.0"
   }
 }
